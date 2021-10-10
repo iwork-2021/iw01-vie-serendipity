@@ -18,71 +18,65 @@ class Calculator {
         "+":Operation.BinaryOp{
             (op1,op2) in
             return op1+op2
-        }
+        },
         "-":Operation.BinaryOp{
             (op1,op2) in
             return op1-op2
-        }
+        },
         "*":Operation.BinaryOp{
             (op1,op2) in
             return op1*op2
-        }
+        },
         "/":Operation.BinaryOp{
             (op1,op2) in
             return op1/op2
-        }
-        "=":Operation.EqualOp
+        },
+        "=":Operation.EqualOp,
         "%":Operation.UnaryOp{
             op in
             return op/100.0
-        }
+        },
         "+/-":Operation.UnaryOp{
             op in
             return -op
-        }
+        },
         "C":Operation.UnaryOp{
             _ in
             return 0
-        }
+        },
         "sin":Operation.UnaryOp{
             op in
             return sin(op)
-        }
+        },
         "cos":Operation.UnaryOp{
             op in
             return cos(op)
-        }
+        },
         "tan":Operation.UnaryOp{
             op in
             return tan(op)
-        }
+        },
         "sinh":Operation.UnaryOp{
             op in
             return sinh(op)
-        }
+        },
         "cosh":Operation.UnaryOp{
             op in
             return cosh(op)
-        }
+        },
         "tanh":Operation.UnaryOp{
             op in
             return tanh(op)
-        }
+        },
         "x!":Operation.UnaryOp{
             op in
             return
-        }
+        },
         "EE":Operation.UnaryOp{
             op in
-            return 10^op
-        }
-        ""
-        "e":Operation.Constant
-        {
-            _ in
-            return 2.7
-        }
-        ""
+            return 10
+        },
+        "e":Operation.Constant(2.7)
     ]
 
     struct Intermediate{
@@ -92,11 +86,11 @@ class Calculator {
     var pendingOp:Intermediate?=nil
     func performOperation(operation:String,operand:Double)->Double?
     {
-        if(let op=operations[operation])
+        if let op = operations[operation]
         {
             switch op{
                 case .BinaryOp(let function):
-                    pendingOp=Intermediate(firstOp:oprand,waitingOperation:function)
+                    pendingOp=Intermediate(firstOp:operand,waitingOperation:function)
                     return nil
                 case .Constant(let value):
                     return value
@@ -107,6 +101,5 @@ class Calculator {
             }
         }
         return nil
-
     }
 }
