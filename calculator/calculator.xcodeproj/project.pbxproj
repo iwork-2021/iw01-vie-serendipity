@@ -13,6 +13,7 @@
 		7C9525A32712A2A200E859E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C9525A12712A2A200E859E5 /* Main.storyboard */; };
 		7C9525A52712A2A400E859E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C9525A42712A2A400E859E5 /* Assets.xcassets */; };
 		7C9525A82712A2A400E859E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C9525A62712A2A400E859E5 /* LaunchScreen.storyboard */; };
+		7C9525B02712A54200E859E5 /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9525AF2712A54200E859E5 /* Calculator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		7C9525A42712A2A400E859E5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7C9525A72712A2A400E859E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7C9525A92712A2A400E859E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7C9525AF2712A54200E859E5 /* Calculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				7C9525A42712A2A400E859E5 /* Assets.xcassets */,
 				7C9525A62712A2A400E859E5 /* LaunchScreen.storyboard */,
 				7C9525A92712A2A400E859E5 /* Info.plist */,
+				7C9525AF2712A54200E859E5 /* Calculator.swift */,
 			);
 			path = calculator;
 			sourceTree = "<group>";
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7C9525A02712A2A200E859E5 /* ViewController.swift in Sources */,
+				7C9525B02712A54200E859E5 /* Calculator.swift in Sources */,
 				7C95259C2712A2A200E859E5 /* AppDelegate.swift in Sources */,
 				7C95259E2712A2A200E859E5 /* SceneDelegate.swift in Sources */,
 			);
